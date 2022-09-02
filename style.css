@@ -1,0 +1,583 @@
+body{
+    background-color:#0A192F;
+    padding : 200px 120px 0px;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{ /*행동하는 감자되기*/
+    color:#FF726C;
+    font-family:'GmarketSansLight';
+    font-size:clamp(40px, 4vw, 70px); /*여기서 70px 큰 화면에서 보기 */
+    margin-bottom: 0px;
+}
+
+h3{ /*각 페이지 제목*/
+    color:#FF726C;
+}
+
+h4{
+    color:#E0D6D6;
+}
+
+h5{
+    color:#FFC3BD;
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-family: "Bahnschrift", Times, serif;
+}
+
+.big-heading{
+    margin: 0px;
+    font-size: clamp(40px, 8vw, 70px);
+    font-family: 'GmarketSansMedium';
+}
+
+.introduce-content{
+    display:block;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    font-family: 'GmarketSansMedium';
+    color:#E0D6D6;
+}
+
+.subheading-kor{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: 'GmarketSansMedium';
+    padding-top: 140px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.subheading-eng{
+    font-size:clamp(1rem, 2vw, 1.5rem);
+    font-family:'Bahnschrift';
+    color:#FDCFCF;
+    margin-top: 0px;
+}
+
+.definition{
+    font-size: 14px;
+    font-family: 'GmarketSansLight';
+    color:#E9CDCD;
+    margin-top: 7px;
+}
+
+.content{
+    font-size: 17px;
+    font-family: 'GmarketSansLight';
+    color:#F7BBBB;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+/*what-i-have-studied timeline*/
+#container{
+    min-height: 100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding: 0;
+    /* background-color: ; */
+}
+#timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card{
+    padding: 0;
+    background-color: #233554;
+}
+.card-head{
+    padding: 10px 15px 5px;
+    font-family: 'GmarketSansMedium';
+    /* color:#FF726C; h3에서 정의함 */
+    background-color: #0F1723;
+}
+
+.card-title{
+    font-size: 22px;
+    margin-top: 0;
+}
+.card .date{
+    font-size:14px;
+    font-family: 'GmarketSansLight';
+    color:#FDCFCF;
+    /* padding: 10px 15px 5px; */
+}
+.card-content{
+    font-size: 16px;
+    font-family:'GmarketSansLight';
+    color:#D9D9D9;
+    padding: 10px 15px 5px;
+}
+
+.study-image{
+    /* position:relative; */
+    width: 100%;
+
+}
+@media only screen and (min-width: 768px){
+    #timeline:before{
+        content: "";
+        position:absolute;
+        top:0;
+        left:50%;
+        transform: translateX(-50%);
+        width:2px;
+        height:100%;
+        background-color: gray;
+    }
+    #timeline .card{
+        width:50%;
+        position:relative;
+        margin-bottom: 50px;
+    }
+    #timeline .card::before{
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: #e78784;
+        top: 0px;
+    }
+    #timeline .card:nth-child(odd){
+        float:left;
+        clear:right;
+        transform: translateX(-30px);
+        border-radius: 0px 0px 20px 20px;
+    }
+    #timeline .card:nth-child(odd)::before{
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+    #timeline .card:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 0px 20px 20px;
+    }
+    #timeline .card:nth-child(even)::before{
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+}
+
+/*my personality*/
+/* #grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#grid .personality1{
+    border-right: 1px solid #8892B0;
+    text-align: center;
+}
+#grid .personality2{
+    border-right: 1px solid #8892B0;
+    text-align: center;
+}
+#grid .personality3{
+    border-right: 1px solid #8892B0;
+    text-align: center;
+}
+#grid .personality4{
+    text-align: center;
+} */
+
+
+
+/*lamp*/
+#flex-container{
+    /* height:50vh; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    display:flex;
+    justify-content: space-around; 
+  }
+  
+  .personality{
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    height: fit-content;
+    /* border-right: 1px solid rgb(255, 0, 149); */
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  #turnon1{
+    width:100%;
+    height:100%;
+    display:block;
+    /* background:#111; */
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .lamp1, .turnoff1{
+      width:50px;
+      /* top:auto;
+      right: ; */
+      position: absolute;
+    border-bottom: 75px solid #002060;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display:block;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 11;
+  } 
+  
+  .turnoff1{
+  display:none;
+  }
+
+  .bulb1{
+    position:relative;
+    top:40px;
+    height:32px;
+    width:32px;
+    background:#FFF2CC;
+    border-radius:32px;
+    z-index:9;
+    transition: 300ms;
+  }
+  
+
+  .light1{
+    position: absolute;
+    width: 50px;
+    border: 75px solid transparent;
+    border-top: none;
+    border-bottom: 125px solid #44546A;
+    /* top: 20px; */
+    margin-top :70px;
+    opacity: 0 ;
+    z-index: 1;
+    transition: 300ms;
+   
+    
+  }
+
+  #turnon1:target .light1{ opacity:1;}
+  #turnon1:target .bulb1{ background:#FAEB83; }
+  #turnon1:target .turnoff1{ display:block; }
+  #turnon1:target .lamp1{ display:none; } 
+
+  #turnon2{
+    width:100%;
+    height:100%;
+    display:block;
+    /* background:#111; */
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .lamp2, .turnoff2{
+      width:50px;
+      /* top:auto;
+      right: ; */
+      position: absolute;
+    border-bottom: 75px solid #002060;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display:block;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 11;
+  } 
+  
+  .turnoff2{
+  display:none;
+  }
+
+  .bulb2{
+    position:relative;
+    top:40px;
+    height:32px;
+    width:32px;
+    background:#FFF2CC;
+    border-radius:32px;
+    z-index:9;
+    transition: 300ms;
+  }
+  
+
+  .light2{
+    position: absolute;
+    width: 50px;
+    border: 75px solid transparent;
+    border-top: none;
+    border-bottom: 125px solid #44546A;
+    /* top: 20px; */
+    margin-top :70px;
+    opacity: 0;
+    z-index: 1;
+    transition: 300ms;
+   
+    
+  }
+
+  #turnon2:target .light2{ opacity:1;}
+  #turnon2:target .bulb2{ background:#FAEB83; }
+  #turnon2:target .turnoff2{ display:block; }
+  #turnon2:target .lamp2{ display:none; } 
+  
+  #turnon3{
+    width:100%;
+    height:100%;
+    display:block;
+    /* background:#111; */
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .lamp3, .turnoff3{
+      width:50px;
+      /* top:auto;
+      right: ; */
+      position: absolute;
+    border-bottom: 75px solid #002060;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display:block;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 11;
+  } 
+  
+  .turnoff3{
+  display:none;
+  }
+
+  .bulb3{
+    position:relative;
+    top:40px;
+    height:32px;
+    width:32px;
+    background:#FFF2CC;
+    border-radius:32px;
+    z-index:9;
+    transition: 300ms;
+  }
+  
+
+  .light3{
+    position: absolute;
+    width: 50px;
+    border: 75px solid transparent;
+    border-top: none;
+    border-bottom: 125px solid #44546A;
+    /* top: 20px; */
+    margin-top :70px;
+    opacity: 0;
+    z-index: 1;
+    transition: 300ms;
+   
+    
+  }
+
+  #turnon3:target .light3{ opacity:1;}
+  #turnon3:target .bulb3{ background:#FAEB83; }
+  #turnon3:target .turnoff3{ display:block; }
+  #turnon3:target .lamp3{ display:none; } 
+  
+  #turnon4{
+    width:100%;
+    height:100%;
+    display:block;
+    /* background:#111; */
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .lamp4, .turnoff4{
+      width:50px;
+      /* top:auto;
+      right: ; */
+      position: absolute;
+    border-bottom: 75px solid #002060;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    display:block;
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    z-index: 11;
+  } 
+  
+  .turnoff4{
+  display:none;
+  }
+
+  .bulb4{
+    position:relative;
+    top:40px;
+    height:32px;
+    width:32px;
+    background:#FFF2CC;
+    border-radius:32px;
+    z-index:9;
+    transition: 300ms;
+  }
+  
+
+  .light4{
+    position: absolute;
+    width: 50px;
+    border: 75px solid transparent;
+    border-top: none;
+    border-bottom: 125px solid #44546A;
+    /* top: 20px; */
+    margin-top :70px;
+    opacity: 0;
+    z-index: 1;
+    transition: 300ms;
+   
+    
+  }
+
+  #turnon4:target .light4{ opacity:1;}
+  #turnon4:target .bulb4{ background:#FAEB83; }
+  #turnon4:target .turnoff4{ display:block; }
+  #turnon4:target .lamp4{ display:none; } 
+  
+  
+  .personality1{
+    flex-grow:1;  
+  }
+  .personality2{
+    flex-grow:1;
+  }
+  .personality3{
+    flex-grow:1;
+  }
+  .personality4{
+    flex-grow:1;
+  }
+  
+  .characteristic{
+    padding-top: 50px;
+    margin: 0;
+    z-index: 3;
+    font-size: 18px;
+    font-family:'GmarketSansMedium';
+    
+}
+
+.characterContent{
+    font-size: 16px;
+    font-family:'GmarketSansLight';
+    color:#ecc5c5;
+    padding-bottom: 50px;
+}
+
+.clickLamp{
+    font-size: 16px;
+    font-family:'GmarketSansLight';
+    color:#A98585;
+    text-align: center;
+ 
+}
+
+
+/*what I love*/
+#image-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.image-container{
+    position: relative;
+}
+
+.love-image{
+    width:250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.middle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* place-content: center; */
+    top:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width:250px;
+    height:250px;
+    background: rgba(0, 0, 0, 0.655);
+    font-family: 'GmarketSansMedium';
+    color:#D9D9D9;
+    text-align: center;
+    opacity:0;
+}
+.image-title{
+    font-size:  clamp(1rem, 3vw, 1.5rem) ;
+    font-family:'SEBANG_Gothic_Bold';
+    color: #FDCFCF;
+    text-align: center;
+}
+
+.image-container:hover .middle{
+    opacity:1;
+    transition: 300ms;
+}
+
+/*contact me*/
+
+.contact-img{
+    width: 50px;
+}
+
+
+
